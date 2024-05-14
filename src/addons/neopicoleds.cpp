@@ -482,7 +482,10 @@ std::vector<std::vector<Pixel>> NeoPicoLEDAddon::createLEDLayout(ButtonLayout la
 			return generatedLEDStickless(&positions);
 
 		case BUTTON_LAYOUT_STICKLESS_14:
-			return generatedLEDStickless(&positions);		
+			return generatedLEDStickless(&positions);	
+				
+		case BUTTON_LAYOUT_STICKLESS_23:
+			return generatedLEDStickless(&positions);	
 	}
 
 	assert(false);

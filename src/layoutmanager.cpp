@@ -81,6 +81,8 @@ LayoutManager::LayoutList LayoutManager::getLeftLayout(uint16_t index) {
             return drawStickless13A();
         case BUTTON_LAYOUT_STICKLESS_16:
             return drawStickless16A();
+        case BUTTON_LAYOUT_STICKLESS_23:
+            return drawStickless23A();
         case BUTTON_LAYOUT_STICKLESS_14:
             return drawStickless14A();
         case BUTTON_LAYOUT_DANCEPAD_DDR_LEFT:
@@ -157,6 +159,8 @@ LayoutManager::LayoutList LayoutManager::getRightLayout(uint16_t index) {
             return this->drawSticklessButtons13B();
         case BUTTON_LAYOUT_STICKLESS_16B:
             return this->drawSticklessButtons16B();
+        case BUTTON_LAYOUT_STICKLESS_23B:
+            return this->drawSticklessButtons23B();
         case BUTTON_LAYOUT_STICKLESS_14B:
             return this->drawSticklessButtons14B();
         case BUTTON_LAYOUT_DANCEPADB:
@@ -384,6 +388,16 @@ LayoutManager::LayoutList LayoutManager::drawStickless16A()
 LayoutManager::LayoutList LayoutManager::drawSticklessButtons16B()
 {
     return BUTTON_GROUP_STICKLESS_BUTTONS16B;
+}
+
+LayoutManager::LayoutList LayoutManager::drawStickless23A()
+{
+    return BUTTON_GROUP_STICKLESS23A;
+}
+
+LayoutManager::LayoutList LayoutManager::drawSticklessButtons23B()
+{
+    return BUTTON_GROUP_STICKLESS_BUTTONS23B;
 }
 
 LayoutManager::LayoutList LayoutManager::drawStickless14A()

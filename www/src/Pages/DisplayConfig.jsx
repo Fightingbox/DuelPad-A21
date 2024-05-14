@@ -47,7 +47,9 @@ const BUTTON_LAYOUTS = [
     { label: 'Beatmania 7 Key Left', value: 24 }, // BUTTON_LAYOUT_BM_7KEY_A
     { label: 'Gitadora Fret', value: 25 }, // BUTTON_LAYOUT_GITADORA_FRET_A
     { label: 'Gitadora Strum', value: 26 }, // BUTTON_LAYOUT_GITADORA_STRUM_A
-    { label: 'Board Defined', value: 27 }, // BUTTON_LAYOUT_BOARD_DEFINED_A
+    { label: 'Stickless DuelPad A23', value: 27}, // BUTTON_LAYOUT_STICKLESS_23
+    { label: 'Board Defined', value: 28 }, // BUTTON_LAYOUT_BOARD_DEFINED_A
+    
 ];
 
 const BUTTON_LAYOUTS_RIGHT = [
@@ -82,7 +84,9 @@ const BUTTON_LAYOUTS_RIGHT = [
     { label: 'Beatmania 7 Key Right', value: 28}, // BUTTON_LAYOUT_BM_7KEY_B
     { label: 'Gitadora Fret', value: 29}, // BUTTON_LAYOUT_GITADORA_FRET_B
     { label: 'Gitadora Strum', value: 30}, // BUTTON_LAYOUT_GITADORA_STRUM_B
-    { label: 'Board Defined', value: 31 }, // BUTTON_LAYOUT_BOARD_DEFINED_B
+    { label: 'Stickless DuelPad A23', value: 31}, // BUTTON_LAYOUT_STICKLESS_23B
+    { label: 'Board Defined', value: 32 }, // BUTTON_LAYOUT_BOARD_DEFINED_B
+
 ];
 
 const SPLASH_MODES = [

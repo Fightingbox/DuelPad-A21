@@ -92,7 +92,9 @@ class LayoutManager {
         LayoutList drawStickless13A();
         LayoutList drawSticklessButtons13B();
         LayoutList drawStickless16A();
+        LayoutList drawStickless23A();
         LayoutList drawSticklessButtons16B();
+        LayoutList drawSticklessButtons23B();
         LayoutList drawStickless14A();
         LayoutList drawSticklessButtons14B();
         LayoutList drawButtonLayoutLeft();
