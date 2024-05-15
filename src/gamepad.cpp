@@ -54,6 +54,13 @@ void Gamepad::setup()
 	mapButtonA1  = new GamepadButtonMapping(GAMEPAD_MASK_A1);
 	mapButtonA2  = new GamepadButtonMapping(GAMEPAD_MASK_A2);
 	mapButtonFn  = new GamepadButtonMapping(AUX_MASK_FUNCTION);
+	mapButtonM1  = new GamepadButtonMapping(GAMEPAD_MASK_M1);
+	mapButtonM2 =  new GamepadButtonMapping(GAMEPAD_MASK_M2);
+	mapButtonREVERSE = new GamepadButtonMapping(GAMEPAD_MASK_REVERSE);
+	mapButtonDU = new GamepadButtonMapping(GAMEPAD_MASK_DDU);
+	mapButtonDD = new GamepadButtonMapping(GAMEPAD_MASK_DDD);
+	mapButtonDL = new GamepadButtonMapping(GAMEPAD_MASK_DDL);
+	mapButtonDR = new GamepadButtonMapping(GAMEPAD_MASK_DDR);
 
 	for (Pin_t pin = 0; pin < (Pin_t)NUM_BANK0_GPIOS; pin++)
 	{
@@ -108,6 +115,13 @@ void Gamepad::reinit()
 	delete mapButtonA1;
 	delete mapButtonA2;
 	delete mapButtonFn;
+	delete mapButtonM1;
+	delete mapButtonM2;
+	delete mapButtonREVERSE;
+	delete mapButtonDU;
+	delete mapButtonDD;
+	delete mapButtonDL;
+	delete mapButtonDR;
 
 	// reinitialize pin mappings
 	this->setup();

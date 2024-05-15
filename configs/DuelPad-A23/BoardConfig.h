@@ -30,7 +30,7 @@
 #define GPIO_PIN_02 GpioAction::BUTTON_PRESS_L3     // L3     | LS     | LS      | L3       | 11     | LS     |
 #define GPIO_PIN_01 GpioAction::BUTTON_PRESS_R3     // R3     | RS     | RS      | R3       | 12     | RS     |
 #define GPIO_PIN_04 GpioAction::BUTTON_PRESS_A1     // A1     | Guide  | Home    | PS       | 13     | ~      |
-//#define GPIO_PIN_03 GpioAction::BUTTON_PRESS_A2     // A2     | ~      | Capture | ~        | 14     | ~      |
+//#define GPIO_PIN_07 GpioAction::BUTTON_PRESS_A2     // A2     | ~      | Capture | ~        | 14     | ~      |
 #define GPIO_PIN_17 GpioAction::BUTTON_PRESS_DDI_UP
 #define GPIO_PIN_12 GpioAction::BUTTON_PRESS_DDI_LEFT
 #define GPIO_PIN_13 GpioAction::BUTTON_PRESS_DDI_DOWN
@@ -59,19 +59,21 @@
 #define KEY_BUTTON_FN   -1                    // Hotkey Function                                        |
 
 // Additional Button Support
-#define GPIO_PIN_07 GpioAction::BUTTON_PRESS_UP
+#define GPIO_PIN_08 GpioAction::BUTTON_PRESS_MACRO_1
 #define GPIO_PIN_03 GpioAction::BUTTON_PRESS_MACRO_2
+#define GPIO_PIN_07 GpioAction::BUTTON_PRESS_MACRO_3     
 // Setting GPIO pins to assigned by add-on
 //
 #define GPIO_PIN_15 GpioAction::ASSIGNED_TO_ADDON
 
+/*
 #define REVERSE_ENABLED 1
 #define PIN_REVERSE 8
 #define REVERSE_UP_DEFAULT 1
 #define REVERSE_DOWN_DEFAULT 1
 #define REVERSE_LEFT_DEFAULT 1
 #define REVERSE_RIGHT_DEFAULT 1
-
+*/
 
 #define USB_PERIPHERAL_ENABLED 1
 #define USB_PERIPHERAL_PIN_DPLUS 22
@@ -95,10 +97,10 @@
 #define LED_FORMAT LED_FORMAT_GRB
 #define LEDS_PER_PIXEL 1
 
-#define LEDS_DPAD_LEFT   1 // 11  
-#define LEDS_DPAD_DOWN   2//10
-#define LEDS_DPAD_RIGHT  3//9
-#define LEDS_DPAD_UP     13
+#define LEDS_DPAD_LEFT   1   
+#define LEDS_DPAD_DOWN   2
+#define LEDS_DPAD_RIGHT  3
+#define LEDS_DPAD_UP     12
 #define LEDS_BUTTON_B3   4
 #define LEDS_BUTTON_B4   5
 #define LEDS_BUTTON_R1   6
@@ -110,7 +112,7 @@
 #define LEDS_BUTTON_S1   -1
 #define LEDS_BUTTON_S2   -1
 #define LEDS_BUTTON_L3   0
-#define LEDS_BUTTON_R3   12
+#define LEDS_BUTTON_R3   13
 #define LEDS_BUTTON_A1   -1
 #define LEDS_BUTTON_A2   14
 #define LEDS_BUTTON_M1   15

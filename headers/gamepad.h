@@ -26,7 +26,7 @@ struct GamepadButtonMapping
 	{}
 
 	uint32_t pinMask;
-	const uint16_t buttonMask;
+	const uint32_t buttonMask;
 };
 
 #define GAMEPAD_DIGITAL_INPUT_COUNT 18 // Total number of buttons, including D-pad
@@ -144,6 +144,13 @@ public:
 	GamepadButtonMapping *mapButtonA1;
 	GamepadButtonMapping *mapButtonA2;
 	GamepadButtonMapping *mapButtonFn;
+	GamepadButtonMapping *mapButtonREVERSE;
+	GamepadButtonMapping *mapButtonDD;
+	GamepadButtonMapping *mapButtonDL;
+	GamepadButtonMapping *mapButtonDR;
+	GamepadButtonMapping *mapButtonDU;
+	GamepadButtonMapping *mapButtonM1;
+	GamepadButtonMapping *mapButtonM2;
 
 	// gamepad specific proxy of debounced buttons --- 1 = active (inverse of the raw GPIO)
 	// see GP2040::debounceGpioGetAll for details
