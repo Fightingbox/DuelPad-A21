@@ -65,8 +65,7 @@ using namespace std;
 #define GAMEPAD_MASK_DDR   (1U << 27)
 #define GAMEPAD_MASK_M1    (1U << 28)
 #define GAMEPAD_MASK_M2    (1U << 29)
-#define GAMEPAD_MASK_REVERSE   (1U << 30)
-#define GAMEPAD_MASK_M3    (1U << 31)
+#define GAMEPAD_MASK_M3    (1U << 30)
 
 
 

@@ -34,7 +34,13 @@ const std::string BUTTON_LABEL_L3 = "L3";
 const std::string BUTTON_LABEL_R3 = "R3";
 const std::string BUTTON_LABEL_A1 = "A1";
 const std::string BUTTON_LABEL_A2 = "A2";
-
+const std::string BUTTON_LABEL_M1 = "M1";
+const std::string BUTTON_LABEL_M2 = "M2";
+const std::string BUTTON_LABEL_M3 = "M3";
+const std::string BUTTON_LABEL_DDU = "DDU";
+const std::string BUTTON_LABEL_DDD = "DDD";
+const std::string BUTTON_LABEL_DDL = "DDL";
+const std::string BUTTON_LABEL_DDR = "DDR";
 static std::vector<uint8_t> EMPTY_VECTOR;
 
 uint32_t rgbPLEDValues[4];
@@ -167,6 +173,32 @@ void NeoPicoLEDAddon::process()
 	}
 
 	uint32_t buttonState = gamepad->state.dpad << 16 | gamepad->state.buttons;
+	Mask_t values = Storage::getInstance().GetGamepad()->debouncedGpio;
+
+	if(values & ((uint32_t)( 1<< 3 )))
+	{
+		buttonState |= GAMEPAD_MASK_M1;
+	}else if(values & ((uint32_t)( 1<< 7 )))
+	{
+		buttonState |= GAMEPAD_MASK_M3;
+	}else if(values & ((uint32_t)( 1<< 8 )))
+	{
+		buttonState |= GAMEPAD_MASK_M2;
+	}else if(values & ((uint32_t)( 1<< 17 )))
+	{
+		buttonState |= GAMEPAD_MASK_DDU;
+	}else if(values & ((uint32_t)( 1<< 12 )))
+	{
+		buttonState |= GAMEPAD_MASK_DDL;
+	}else if(values & ((uint32_t)( 1<< 13 )))
+	{
+		buttonState |= GAMEPAD_MASK_DDD;
+	}else if(values & ((uint32_t)( 1<< 14 )))
+	{
+		buttonState |= GAMEPAD_MASK_DDR;
+	}
+	
+
 	vector<Pixel> pressed;
 	for (auto row : matrix.pixels)
 	{
@@ -316,12 +348,19 @@ std::vector<std::vector<Pixel>> NeoPicoLEDAddon::generatedLEDStickless(vector<ve
 			NO_PIXEL,
 		},
 		{
-			PIXEL(BUTTON_LABEL_S1, GAMEPAD_MASK_S1),
-			PIXEL(BUTTON_LABEL_S2, GAMEPAD_MASK_S2),
+			//PIXEL(BUTTON_LABEL_S1, GAMEPAD_MASK_S1),
+			//PIXEL(BUTTON_LABEL_S2, GAMEPAD_MASK_S2),
 			PIXEL(BUTTON_LABEL_L3, GAMEPAD_MASK_L3),
 			PIXEL(BUTTON_LABEL_R3, GAMEPAD_MASK_R3),
 			PIXEL(BUTTON_LABEL_A1, GAMEPAD_MASK_A1),
 			PIXEL(BUTTON_LABEL_A2, GAMEPAD_MASK_A2),
+			PIXEL(BUTTON_LABEL_M1, GAMEPAD_MASK_M1),
+			PIXEL(BUTTON_LABEL_M2, GAMEPAD_MASK_M2),
+			PIXEL(BUTTON_LABEL_M3, GAMEPAD_MASK_M3),
+			PIXEL(BUTTON_LABEL_DDD, GAMEPAD_MASK_DDD),
+			PIXEL(BUTTON_LABEL_DDU, GAMEPAD_MASK_DDU),
+			PIXEL(BUTTON_LABEL_DDL, GAMEPAD_MASK_DDL),
+			PIXEL(BUTTON_LABEL_DDR, GAMEPAD_MASK_DDR),
 		},
 	};
 
@@ -332,6 +371,7 @@ std::vector<std::vector<Pixel>> NeoPicoLEDAddon::generatedLEDStickless(vector<ve
  * @brief Create an LED layout using a 2x7 matrix.
  */
 std::vector<std::vector<Pixel>> NeoPicoLEDAddon::generatedLEDWasd(std::vector<std::vector<uint8_t>> *positions)
+
 {
 	std::vector<std::vector<Pixel>> pixels =
 	{
@@ -514,13 +554,22 @@ uint8_t NeoPicoLEDAddon::setupButtonPositions()
 	buttonPositions.emplace(BUTTON_LABEL_R3, ledOptions.indexR3);
 	buttonPositions.emplace(BUTTON_LABEL_A1, ledOptions.indexA1);
 	buttonPositions.emplace(BUTTON_LABEL_A2, ledOptions.indexA2);
+	buttonPositions.emplace(BUTTON_LABEL_M1, ledOptions.indexM1);
+	buttonPositions.emplace(BUTTON_LABEL_M2, ledOptions.indexM2);
+	buttonPositions.emplace(BUTTON_LABEL_M3, ledOptions.indexM3);
+	buttonPositions.emplace(BUTTON_LABEL_DDU, ledOptions.indexDDU);
+	buttonPositions.emplace(BUTTON_LABEL_DDD, ledOptions.indexDDD);
+	buttonPositions.emplace(BUTTON_LABEL_DDL, ledOptions.indexDDL);
+	buttonPositions.emplace(BUTTON_LABEL_DDR, ledOptions.indexDDR);
+
+
+
 	uint8_t buttonCount = 0;
 	for (auto const& buttonPosition : buttonPositions)
 	{
 		if (buttonPosition.second > -1)
 			buttonCount++;
 	}
-
 	return buttonCount;
 }
 

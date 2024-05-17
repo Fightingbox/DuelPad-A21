@@ -267,6 +267,15 @@ message LEDOptions
     optional int32 pledIndex2 = 33;
     optional int32 pledIndex3 = 34;
     optional int32 pledIndex4 = 35;
+
+    optional int32 indexM1 = 36;
+    optional int32 indexM2 = 37;
+    optional int32 indexM3 = 38;
+    optional int32 indexDDU = 39;
+    optional int32 indexDDD = 40;
+    optional int32 indexDDL = 41;
+    optional int32 indexDDR = 42;
+
 };
 
 // This has to be kept in sync with AnimationOptions in AnimationStation.hpp

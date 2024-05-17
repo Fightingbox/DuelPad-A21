@@ -56,7 +56,6 @@ void Gamepad::setup()
 	mapButtonFn  = new GamepadButtonMapping(AUX_MASK_FUNCTION);
 	mapButtonM1  = new GamepadButtonMapping(GAMEPAD_MASK_M1);
 	mapButtonM2 =  new GamepadButtonMapping(GAMEPAD_MASK_M2);
-	mapButtonREVERSE = new GamepadButtonMapping(GAMEPAD_MASK_REVERSE);
 	mapButtonDU = new GamepadButtonMapping(GAMEPAD_MASK_DDU);
 	mapButtonDD = new GamepadButtonMapping(GAMEPAD_MASK_DDD);
 	mapButtonDL = new GamepadButtonMapping(GAMEPAD_MASK_DDL);

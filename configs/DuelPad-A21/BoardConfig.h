@@ -8,7 +8,7 @@
 
 #include "enums.pb.h"
 #include "class/hid/hid.h"
-#define BOARD_CONFIG_LABEL "DuelPad A23"
+#define BOARD_CONFIG_LABEL "DuelPad A21"
 
 // Main pin mapping Configuration
 // Mapping between Flatbox Rev4 switch number (as silkscreened) and GPIO pin listed under "Flatbox Rev4 SW#"
@@ -59,13 +59,16 @@
 #define KEY_BUTTON_FN   -1                    // Hotkey Function                                        |
 
 // Additional Button Support
-#define GPIO_PIN_08 GpioAction::BUTTON_PRESS_MACRO_1
-#define GPIO_PIN_03 GpioAction::BUTTON_PRESS_MACRO_2
+#define GPIO_PIN_03 GpioAction::BUTTON_PRESS_MACRO_1
+#define GPIO_PIN_08 GpioAction::BUTTON_PRESS_MACRO_2
 #define GPIO_PIN_07 GpioAction::BUTTON_PRESS_MACRO_3     
 // Setting GPIO pins to assigned by add-on
 //
 #define GPIO_PIN_15 GpioAction::ASSIGNED_TO_ADDON
-
+#define GPIO_PIN_20 GpioAction::ASSIGNED_TO_ADDON
+#define GPIO_PIN_21 GpioAction::ASSIGNED_TO_ADDON
+#define GPIO_PIN_22 GpioAction::ASSIGNED_TO_ADDON
+#define GPIO_PIN_23 GpioAction::ASSIGNED_TO_ADDON
 /*
 #define REVERSE_ENABLED 1
 #define PIN_REVERSE 8
@@ -114,8 +117,14 @@
 #define LEDS_BUTTON_L3   0
 #define LEDS_BUTTON_R3   13
 #define LEDS_BUTTON_A1   -1
-#define LEDS_BUTTON_A2   14
+#define LEDS_BUTTON_A2   -1
 #define LEDS_BUTTON_M1   15
+#define LEDS_BUTTON_M2   14
+#define LEDS_BUTTON_M3   20
+#define LEDS_BUTTON_DDU  16
+#define LEDS_BUTTON_DDD  18
+#define LEDS_BUTTON_DDL   17
+#define LEDS_BUTTON_DDR   19
 
 
 #define HAS_I2C_DISPLAY 1

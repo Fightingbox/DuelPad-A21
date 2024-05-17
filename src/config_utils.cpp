@@ -446,6 +446,15 @@ void ConfigUtils::initUnsetPropertiesWithDefaults(Config& config)
     INIT_UNSET_PROPERTY(config.ledOptions, indexA1, LEDS_BUTTON_A1);
     INIT_UNSET_PROPERTY(config.ledOptions, indexA2, LEDS_BUTTON_A2);
 
+    INIT_UNSET_PROPERTY(config.ledOptions, indexM1, LEDS_BUTTON_M1);
+    INIT_UNSET_PROPERTY(config.ledOptions, indexM2, LEDS_BUTTON_M2);
+    INIT_UNSET_PROPERTY(config.ledOptions, indexM3, LEDS_BUTTON_M3);
+    INIT_UNSET_PROPERTY(config.ledOptions, indexDDU, LEDS_BUTTON_DDU);
+    INIT_UNSET_PROPERTY(config.ledOptions, indexDDD, LEDS_BUTTON_DDD);
+    INIT_UNSET_PROPERTY(config.ledOptions, indexDDL, LEDS_BUTTON_DDL);
+    INIT_UNSET_PROPERTY(config.ledOptions, indexDDR, LEDS_BUTTON_DDR);
+
+
     INIT_UNSET_PROPERTY(config.ledOptions, pledType, PLED_TYPE);
     INIT_UNSET_PROPERTY(config.ledOptions, pledPin1, PLED1_PIN);
     INIT_UNSET_PROPERTY(config.ledOptions, pledPin2, PLED2_PIN);
